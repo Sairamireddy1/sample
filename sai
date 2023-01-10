@@ -1,1 +1,30 @@
-my name 
+package sample;
+
+public class sai {
+	
+	public static void main(String[] args) {
+
+		int yearly=4500;
+		int years= 27;
+		int vaddi=0, asalu_vaddi_kalipi = 0, yearlytotal=0, asalu=0, total=0,totalvaddi_for_asalu=0;
+		
+		for(int i=0; i<years; i++)
+		{
+			yearlytotal = yearlytotal+yearly;
+			vaddi=yearlytotal/100;
+			for(int j=years-i;j>=0;j--)
+			{
+				totalvaddi_for_asalu= vaddi*j;
+				j=0;
+			}
+			total = total+totalvaddi_for_asalu;
+			asalu_vaddi_kalipi = totalvaddi_for_asalu+asalu_vaddi_kalipi;
+			
+			System.out.println("Year:"+i+"  YearlyTotal: "+yearlytotal+"  Vaddi: "+vaddi+
+					"  total_vaddi: "+totalvaddi_for_asalu);
+		}
+		asalu =yearly*27;
+		int finalga_bayata_1rs_vaddi_ki_isthe=asalu_vaddi_kalipi+asalu;
+		System.out.println("Total:  "+asalu+"  asalu_vaddi_kalipi: "+asalu_vaddi_kalipi+"  finalga_bayata_1rs_vaddi_ki_isthe: "+finalga_bayata_1rs_vaddi_ki_isthe);
+	}
+}
